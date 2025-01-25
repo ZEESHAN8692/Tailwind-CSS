@@ -812,9 +812,6 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-11 {
-    width: calc(var(--spacing) * 11);
-  }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
@@ -827,11 +824,29 @@
   .w-2xs {
     width: var(--container-2xs);
   }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
   .w-35 {
     width: calc(var(--spacing) * 35);
   }
+  .w-\[200\] {
+    width: 200;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
   .w-\[300px\] {
     width: 300px;
+  }
+  .w-\[400px\] {
+    width: 400px;
+  }
+  .w-\[700\] {
+    width: 700;
+  }
+  .w-\[700px\] {
+    width: 700px;
   }
   .w-screen {
     width: 100vw;
@@ -1716,6 +1731,9 @@
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-11 {
     padding: calc(var(--spacing) * 11);
   }
@@ -2338,6 +2356,93 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .sm\:text-yellow-400 {
+    @media (width >= 40rem) {
+      color: var(--color-yellow-400);
+    }
+  }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:w-\[400px\] {
+    @media (width >= 48rem) {
+      width: 400px;
+    }
+  }
+  .md\:w-\[700px\] {
+    @media (width >= 48rem) {
+      width: 700px;
+    }
+  }
+  .md\:flex-col {
+    @media (width >= 48rem) {
+      flex-direction: column;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .md\:text-center {
+    @media (width >= 48rem) {
+      text-align: center;
+    }
+  }
+  .md\:text-6xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  .lg\:w-\[800\] {
+    @media (width >= 64rem) {
+      width: 800;
+    }
+  }
+  .lg\:w-\[800px\] {
+    @media (width >= 64rem) {
+      width: 800px;
+    }
+  }
+  .lg\:text-red-700 {
+    @media (width >= 64rem) {
+      color: var(--color-red-700);
+    }
   }
 }
 @keyframes spin {
